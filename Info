@@ -1,0 +1,18 @@
+
+http://www.jcraft.com/jsch/
+
+JSch is used to connect to SSH server (AWS EC2)
+
+mvn clean install
+
+mvn spring-boot:run
+
+http://localhost:8080/
+  
+1)while creating AWS EC2, in Security Groups in Source, select Anywhere
+
+2)our private key should not be accessed by everyone, remove access to others expect you 
+  otherwise we will get Access Denied Exception
+
+3)to connect SSH server by using SSH client   (with out Putty/Winscp/Filezilla)
+  ssh -i C:/AWS/VasuKeyLatest6.pem ubuntu@ec2-52-206-61-127.compute-1.amazonaws.com 
